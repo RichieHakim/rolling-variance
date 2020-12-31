@@ -1,5 +1,5 @@
 # rolling-variance
-Simple code for efficient calculation of online updates to variance using Welford's method.
+Simple code for efficient calculation of online updates to variance and mean using Welford's method.
  
 The purpose of this script is to compute very fast rolling variances and means in a stepwise way. This allows for online processing of incoming data. It uses a recursive algorithm to calculate online updates to the current std and mean.
 
