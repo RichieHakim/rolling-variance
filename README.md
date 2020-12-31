@@ -3,7 +3,8 @@ Simple code for efficient calculation of online updates to variance using Welfor
  
 The purpose of this script is to compute very fast rolling variances and means in a stepwise way. This allows for online processing of incoming data. It uses a recursive algorithm to calculate online updates to the current std and mean.
 
-The only challenge is setting up a rolling buffer of values, which must be done outside of this class. See the demo script for an example. Note: I haven't figured out how to do efficient setting of large array values within objects in Matlab, yet. If you know how to do it, please get in touch or send me a pull request!
+User script must hold onto a rolling buffer of values, which must be done outside of this class. See the demo script for an example. 
+Note: Future improvements to this code should involve including this rolling buffer within the object. I haven't figured out how to do efficient setting of large array values within objects in Matlab, yet. If you know how to do it, please get in touch or send me a pull request! RichHakim@gmail.com
 
 RUNNING (accumulating) vs. ROLLING (windowed):
 In order to use it as a running (accumulating from the first index) average or variance, just set win_size to be inf and vals_old to []. This method can be used to calculate normal variances and means of arrays that are too big to fit into memory!
